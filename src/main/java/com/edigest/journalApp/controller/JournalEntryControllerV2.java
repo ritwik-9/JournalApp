@@ -26,9 +26,9 @@ public class JournalEntryControllerV2 {
     }
 
     @PostMapping
-    public String createEntry(@RequestBody JournalEntry myEntry){
+    public boolean createEntry(@RequestBody JournalEntry myEntry){
         journalEntryService.saveEntry(myEntry);
-        return myEntry.getContent();
+        return true;
 
     }
 
